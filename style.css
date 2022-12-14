@@ -539,6 +539,9 @@ footer span a:hover{
 
 }
 @media(max-width: 1104px){
+    .home .max-width{
+        margin-left: 0px;
+    }
     .about .about-content .left img{
     height: 350px;
     width: 350px;
@@ -556,6 +559,10 @@ footer span a:hover{
         display: block;
         z-index: 999;
     }
+    .menu-btn i.active:before{
+        content: "\food";
+    }
+    
     .navbar .menu{
         position: fixed;
         height: 100vh;
