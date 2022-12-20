@@ -69,7 +69,7 @@ html{
     font-size: 23px;
     cursor: pointer;
     display: none;
-    border: solid red;
+    /* border: solid red; */
 }
 .scroll-up-button{
     position: fixed;
@@ -209,7 +209,7 @@ section .title::after {
 .about .about-content .right p{
     text-align: justify;
 }
-.about .about-content .right a{
+.about .about-content .right .resume-btn{
     display: inline-block;
     background: crimson;
     color: #fff;
@@ -220,6 +220,32 @@ section .title::after {
     border-radius: 6px;
     border: 2px solid crimson;
     transition: all 0.3s ease;
+}
+.about .about-content .right .link{
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-color: initial;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    display: inline-block;
+    z-index: 0;
+    color: #099;
+    /* transition: all 0.3s ease; */
+}
+.about .about-content .right .link::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0.15em;
+    height: 0.15em;
+    width: 0;
+    background-color: #0cc;
+    transition: all .3s 
+           cubic-bezier(.4, 0, .5, 1.5);
+    opacity: .5;
+    z-index: -1;
 }
 .about .about-content .right a:hover{
     color: crimson;
