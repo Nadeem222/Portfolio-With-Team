@@ -59,3 +59,30 @@ $(document).ready(() => {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const submitButton = document.getElementById('submitForm');
+    const messageContainer = document.getElementById('messageContainer');
+
+    submitButton.addEventListener('click', function() {
+        // Build the Google Form URL with form data
+        const googleFormUrl = "https://docs.google.com/spreadsheets/d/1rKLEK3-7rhgHTLVBwFkKnvMaTaUmgkiLi-r0gZxDLsA/edit?usp=sharing"; // Replace with your Google Form URL
+        const formData = new FormData(document.getElementById('contactForm'));
+        const formEntries = formData.entries();
+        let googleFormSubmitUrl = googleFormUrl + "formResponse?";
+
+        for (let entry of formEntries) {
+            const key = encodeURIComponent(entry[0]);
+            const value = encodeURIComponent(entry[1]);
+            googleFormSubmitUrl += key + "=" + value + "&";
+        }
+
+        // Send data to Google Form using an image beacon
+        const img = new Image();
+        img.src = googleFormSubmitUrl;
+        img.style.display = 'none';
+
+        messageContainer.innerHTML = 'Message sent successfully!';
+    });
+});
