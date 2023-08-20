@@ -369,7 +369,7 @@ section .title::after {
 
 /* teams section styling */
 .teams .title::after{
-    content: "who with me";
+    content: "What I Have Done";
 }
 .teams .carousel .card{
     /* background: #222; */
@@ -407,11 +407,11 @@ section .title::after {
     margin: 10px 0 7px 0;
 }
 .teams .carousel .card img{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 270px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid crimson;
+    /* border-radius: 50%;
+    border: 5px solid crimson; */
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
@@ -419,7 +419,7 @@ section .title::after {
 }
 .owl-dots{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .owl-dot{
     height:  13px;
